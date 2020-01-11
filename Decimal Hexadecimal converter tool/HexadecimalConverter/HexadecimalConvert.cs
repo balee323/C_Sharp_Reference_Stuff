@@ -11,7 +11,6 @@ namespace HexadecimalConverter
 
         public static int ConvertHexToDecimal(string hexValue)
         {
-
             var valArray = hexValue.ToCharArray();
             var workingList = new List<int>();
 
@@ -58,14 +57,11 @@ namespace HexadecimalConverter
                                 break;
                             }                
 
-                    }
-                                              
+                    }                                            
                 }
             }
 
-            var decimalVal = workingList[0];
-
-      
+            var decimalVal = workingList[0];     
                 for(int i = 1; i < workingList.Count; i++)
                 {
                     decimalVal = (decimalVal * 16) + workingList[i];
@@ -76,31 +72,25 @@ namespace HexadecimalConverter
 
 
         public static string ConvertToHexaDecimal(int number)
-        {
-
-            var workingList = new List<string>();
+        {           
             double intermediate = number;
+            var workingList = new List<string>();
 
             while (true)
             {
-
                 intermediate = intermediate / 16; 
                 var tempSplit = intermediate.ToString().Split('.');
 
                 if (int.Parse(tempSplit[0]) < 16)
-                {
-           
+                {       
                     var fractionValue = double.Parse("." + tempSplit[1]) * 16;
                     workingList.Add(GetHexLetter(fractionValue));
                     workingList.Add(GetHexLetter(int.Parse(tempSplit[0])));
-
                     workingList.Reverse();
-
                     break; //exit loop
                 }
                 else
                 {
-
                     intermediate = int.Parse(tempSplit[0]);
                     var fractionValue = double.Parse("." + tempSplit[1]) * 16;
                     workingList.Add(GetHexLetter(fractionValue));
@@ -120,7 +110,6 @@ namespace HexadecimalConverter
 
         private static string GetHexLetter(double number)
         {
-
             if (number == 15)
             {
                 return ("F");
@@ -153,9 +142,7 @@ namespace HexadecimalConverter
             {
                 return number.ToString();
             }
-
         }
-
 
     }
 }
