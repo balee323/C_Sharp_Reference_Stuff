@@ -23,7 +23,7 @@ namespace HexadecimalConverter
             {
                 if (RadioToBase16.Checked)
                 {
-                   TxtOutPut.Text = HexadecimalConvert.ConvertToHexaDecimal(int.Parse(txtInput.Text));
+                   TxtOutPut.Text = HexadecimalConvert.ConvertDecimalToHex(int.Parse(txtInput.Text));
                 }
                 else
                 {

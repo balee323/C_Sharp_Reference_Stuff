@@ -6,9 +6,7 @@ namespace HexadecimalConverter
     [TestFixture]
     class Tests
     {
-
-       
-
+     
 
         [SetUp]
         public void Setup()
@@ -78,7 +76,7 @@ namespace HexadecimalConverter
         [Test]
         public void Hexadecimal_Case1_convertedCorrectly_DecimalValues()
         {
-            var value = HexadecimalConvert.ConvertToHexaDecimal(90);
+            var value = HexadecimalConvert.ConvertDecimalToHex(90);
 
             Assert.AreEqual("5A", value);
         }
@@ -86,7 +84,7 @@ namespace HexadecimalConverter
         [Test]
         public void Hexadecimal_Case2_convertedCorrectly_DecimalValues()
         {
-            var value = HexadecimalConvert.ConvertToHexaDecimal(190);
+            var value = HexadecimalConvert.ConvertDecimalToHex(190);
 
             Assert.AreEqual("BE", value);
         }
@@ -95,7 +93,7 @@ namespace HexadecimalConverter
         [Test]
         public void Hexadecimal_Case3_convertedCorrectly_DecimalValues()
         {
-            var value = HexadecimalConvert.ConvertToHexaDecimal(8500);
+            var value = HexadecimalConvert.ConvertDecimalToHex(8500);
 
             Assert.AreEqual("2134", value);
         }

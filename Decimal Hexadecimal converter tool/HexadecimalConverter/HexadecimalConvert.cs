@@ -71,7 +71,7 @@ namespace HexadecimalConverter
         }
 
 
-        public static string ConvertToHexaDecimal(int number)
+        public static string ConvertDecimalToHex(int number)
         {           
             double intermediate = number;
             var workingList = new List<string>();
