@@ -11,31 +11,6 @@ namespace LambdaStuff
 
         private List<string> _list = new List<string>() { "brian", "john", "mike", "sam", "allan" };
 
-        private string _str = string.Empty;
-
-        public event EventHandler StringValueChanged;
-
-        
-
-        public string Str
-        {
-            get { return Str; }
-            set
-            {
-                if (value != _str)
-                {
-                    //trigger event
-                    StringValueChanged(this, EventArgs.Empty);
-                };
-            }
-        }
-
-       
-        public LambdaPlayground()
-        {
-            SetupEventHandlerMethod();
-        }
-
 
         public void Find(string name)
         {
@@ -61,17 +36,6 @@ namespace LambdaStuff
 
         }
 
-
-        private void SetupEventHandlerMethod()
-        {
-            StringValueChanged += OnStringValueChanged; 
-        }
-
-
-        private void OnStringValueChanged(object sender, EventArgs e)
-        {
-            Console.WriteLine("String Value has been changed!");
-        }
 
     }
 }

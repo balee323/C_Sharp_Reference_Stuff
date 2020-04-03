@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace LambdaStuff
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
 
@@ -21,8 +23,16 @@ namespace LambdaStuff
 
             lpg.PrintNames();
 
+            
+     
 
-            lpg.Str = "something else"; //cool, works!
+            //showing form stuff
+
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LambdaLearning1());
+
 
             Console.ReadKey();
         }

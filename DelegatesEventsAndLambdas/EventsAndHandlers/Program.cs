@@ -23,15 +23,17 @@ namespace EventsAndHandlers
                 //create a method here... Note that this is much clear if we use Lambdas..
                 Console.WriteLine("Anonomyous method: work has been completed");
             };
-                
-
-            //**Lambda's baby**
-
-
-
 
             KickOffSomeWork(work);
 
+
+            Console.WriteLine("************ string value changed event triggered and handled! see below.");
+
+            var valueChangedExample = new ObjectValueChangedEventExample();
+            //testing out string changed event.  Awesome to have it.
+            valueChangedExample.Str = "something else"; //cool, works!
+
+          
             Console.ReadKey();
         }
 

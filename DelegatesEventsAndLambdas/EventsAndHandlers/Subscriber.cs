@@ -25,7 +25,7 @@ namespace EventsAndHandlers
 
             //1.  This is the long way, you must create instance of delegate yourself.
 
-            //Subscribed event to a handler method
+            //Subscribed event to a handler method by creating instance of delegate
             _work.DidSomeWork += new SpecialCustomDelegates.DidSomeWorkHandler(SpecialCustomDelegateHandlerMethods.OnDidSomeWork);
 
             //subscibed to event to handler method (custom event args)
@@ -41,7 +41,7 @@ namespace EventsAndHandlers
             //2. This is the easy way, the instance of the delegate gets created at runtime.
             //C# will infer the delegate at runtime
 
-            //Subscribed event to a handler method
+            //Subscribed event to a handler method (instance of delegate is inferred)
             _work.DidSomeWork += SpecialCustomDelegateHandlerMethods.OnDidSomeWork;
 
             //subscibed to event to handler method (custom event args)
