@@ -8,7 +8,29 @@ namespace Modulus
     {
         public void RunModulusStuff()
         {
-            var remainder = 10 % 6;  //the modulus is 6
+
+            var remainder = 9 % 10;  //the modulus is 10
+            Console.WriteLine(remainder);  //remainder = 9
+                                           //10 -  = something that is divisible by 6
+
+
+            remainder = 15 % 10;  //the modulus is 10
+            Console.WriteLine(remainder);  //remainder = 5
+
+            remainder = 110 % 10;  //the modulus is 10
+            Console.WriteLine(remainder);  //remainder = 0
+
+            remainder = 1 % 12;  //the modulus is 12
+            Console.WriteLine(remainder);  //remainder = 1
+
+            remainder = 5 % 12;  //the modulus is 12
+            Console.WriteLine(remainder);  //remainder = 5
+
+            remainder = 23 % 12;  //the modulus is 12
+            Console.WriteLine(remainder);  //remainder = 11
+
+
+            remainder = 10 % 6;  //the modulus is 6
             Console.WriteLine(remainder);  //remainder = 4
                                            //10 - 4 = something that is divisible by 6
 
