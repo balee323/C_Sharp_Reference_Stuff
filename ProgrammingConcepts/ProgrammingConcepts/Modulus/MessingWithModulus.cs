@@ -20,6 +20,22 @@ namespace Modulus
             remainder = 110 % 10;  //the modulus is 10
             Console.WriteLine(remainder);  //remainder = 0
 
+            remainder = -5 % 10;  //the modulus is 10
+            Console.WriteLine(remainder);  //remainder = -5
+
+            remainder = -10 % 10;  //the modulus is 10
+            Console.WriteLine(remainder);  //remainder = 0
+
+            remainder = -21 % 10;  //the modulus is 10
+            Console.WriteLine(remainder);  //remainder = -1
+
+            remainder = -21 % -10;  //the modulus is -10
+            Console.WriteLine(remainder);  //remainder = -1
+
+            remainder = 21 % -10;  //the modulus is -10
+            Console.WriteLine(remainder);  //remainder = 1
+
+
             remainder = 1 % 12;  //the modulus is 12
             Console.WriteLine(remainder);  //remainder = 1
 
