@@ -15,6 +15,9 @@ namespace EventsAndHandlers
             var subscriber = new Subscriber(work);
             subscriber.SubscribeToWork();
 
+            work.DoWork();
+            work.DoSomeMoreWork();
+
 
             //**anomoyous method**
             //we can also directly hook in an event with an anomoyous method when we subscrible
@@ -24,7 +27,7 @@ namespace EventsAndHandlers
                 Console.WriteLine("Anonomyous method: work has been completed");
             };
 
-            KickOffSomeWork(work);
+
 
 
             Console.WriteLine("************ string value changed event triggered and handled! see below.");
@@ -37,12 +40,6 @@ namespace EventsAndHandlers
             Console.ReadKey();
         }
 
-
-        public static void KickOffSomeWork(Work work)
-        {
-            work.DoWork();
-            work.DoSomeMoreWork();
-        }
 
     }
 }

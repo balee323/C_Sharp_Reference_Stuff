@@ -13,6 +13,7 @@ namespace EventsAndHandlers
 
 
 
+
         public string Str
         {
             get { return Str; }
@@ -22,25 +23,21 @@ namespace EventsAndHandlers
                 {
                     //trigger event
                     StringValueChanged(this, EventArgs.Empty);
-                };
+                }
             }
         }
 
 
+        //constructor
         public ObjectValueChangedEventExample()
         {
-            SetupEventHandlerMethod();
-        }
-
-
-    
-
-        private void SetupEventHandlerMethod()
-        {
+            //wireup event to event handler (callback method)
             StringValueChanged += OnStringValueChanged;
         }
+ 
 
 
+        //call back method (eventhandler method)
         private void OnStringValueChanged(object sender, EventArgs e)
         {
             Console.WriteLine("String Value has been changed!");

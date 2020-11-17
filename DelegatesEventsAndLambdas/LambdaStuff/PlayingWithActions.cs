@@ -12,12 +12,10 @@ namespace LambdaStuff
         //Fuct<T, TResult> takes 1 parameter and returns type TResult.
 
         Action doSpecialThing;
-
         Action doSpecialLambdaThing;
 
         //Use parameter with the Action
         Action<string> doSpecialLambdaThingWithParam;
-
         Action<string, int, object> doSpecialLambdaThingWithMultiParams; 
 
         public PlayingWithActions()
@@ -25,12 +23,14 @@ namespace LambdaStuff
             //assign method to Action (delegate) type
             doSpecialThing = MethodForActionDelegate;
 
+            //use lambda
             doSpecialLambdaThing = () =>
             {
                 Console.WriteLine("blah blah, lambda method is attached to Action Type");
             };
 
 
+            //use lambda with param
             doSpecialLambdaThingWithParam = (message) => Console.WriteLine(message); 
             //Now you would have to envoke this action and pass a string parameter.
         }

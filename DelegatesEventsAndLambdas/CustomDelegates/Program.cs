@@ -13,21 +13,15 @@ namespace CustomDelegates
             //invocationList.
 
 
-
-
             //create delegate and attach handler
             //Delegate has been wiredup with a HandlerMethod (callback function) by creating an instance of the delegate.
-            SpecialCustomDelegates.DidSomeWorkHandler delegate1 = new SpecialCustomDelegates.DidSomeWorkHandler(SpecialCustomDelegateHandlerMethods.OnDidSomeWork);
-
-
-          
+            SpecialCustomDelegates.DidSomeWorkHandler delegate1 = new SpecialCustomDelegates.DidSomeWorkHandler(SpecialCustomDelegateHandlerMethods.OnDidSomeWork); //put function name into delegate
+       
             //now let's envoke the delegate (events also envoke the delegates)
             delegate1("scaredYa", TypeOfWork.ScaryWork);
 
          
-
             //Delegates with return values
-
             SpecialCustomDelegates.DidSomeWorkWithResultHandler delegate2 = new SpecialCustomDelegates.DidSomeWorkWithResultHandler(SpecialCustomDelegateHandlerMethods.OnDidSomeWorkWithReturn);
 
             var number = delegate2("let's get a number", TypeOfWork.CoolWork);
