@@ -1,5 +1,6 @@
 ﻿
 using NUnit.Framework;
+using System;
 
 namespace HexadecimalConverter
 {
@@ -56,6 +57,20 @@ namespace HexadecimalConverter
 
 
         [Test]
+        public void DecimalToHex_convertedCorrectly_NoExceptionsThrown()
+        {
+            Random random = new Random();
+
+            for(int i = 0; i < 50_000; i++)
+            {
+
+                int number = random.Next(i, int.MaxValue);
+
+                Assert.DoesNotThrow(() => HexadecimalConvert.ConvertDecimalToHex(number), $"decimal {number} did not convert");
+            }
+        }
+
+        [Test]
         public void Decimal_Case6_convertedCorrectly_ValuesHexValues()
         {
             var value = HexadecimalConvert.ConvertHexToDecimal("AAF0");
@@ -98,6 +113,14 @@ namespace HexadecimalConverter
             Assert.AreEqual("2134", value);
         }
 
+
+        [Test]
+        public void Hexadecimal_Case4_convertedCorrectly_DecimalValues()
+        {
+            var value = HexadecimalConvert.ConvertDecimalToHex(16);
+
+            Assert.AreEqual("11", value);
+        }
 
     }
 }

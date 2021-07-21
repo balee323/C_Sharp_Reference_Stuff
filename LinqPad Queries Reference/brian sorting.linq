@@ -1,7 +1,6 @@
 <Query Kind="Statements" />
 
-
-string[] letters = new string[]{"c", "f", "o", "y", "q", "a", "o", "x", "b"};
+string[] letters = new string[]{"c", "f", "o", "y", "g", "q", "a", "z", "o", "x", "b", "d", "e"};
 
 for (int i = 0; i < letters.Length; i++)
 {
@@ -32,8 +31,3 @@ for (int i = 0; i < letters.Length; i++)
 
     Console.WriteLine("===============");		
 }
-
-
-
-
-

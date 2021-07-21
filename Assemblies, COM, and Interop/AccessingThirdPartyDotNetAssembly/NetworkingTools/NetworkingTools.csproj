@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>K:\BrianCode\C_Sharp_Reference_Stuff\Assemblies, COM, and Interop\AccessingThirdPartyDotNetAssembly\AccessingThirdPartyDotNetAssembly\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+</Project>

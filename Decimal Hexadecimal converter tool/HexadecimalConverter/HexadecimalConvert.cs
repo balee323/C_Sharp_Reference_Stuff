@@ -9,10 +9,10 @@ namespace HexadecimalConverter
     static class HexadecimalConvert
     {
 
-        public static int ConvertHexToDecimal(string hexValue)
+        public static long ConvertHexToDecimal(string hexValue)
         {
             var valArray = hexValue.ToCharArray();
-            var workingList = new List<int>();
+            var workingList = new List<long>();
 
             foreach(char c in valArray)
             {
@@ -71,17 +71,23 @@ namespace HexadecimalConverter
         }
 
 
-        public static string ConvertDecimalToHex(int number)
+        //this is broken. Does not work in all cases
+        public static string ConvertDecimalToHex(long number)
         {           
             double intermediate = number;
             var workingList = new List<string>();
+
+            if(number == 0)
+            {
+                return "0";
+            }
 
             while (true)
             {
                 intermediate = intermediate / 16; 
                 var tempSplit = intermediate.ToString().Split('.');
 
-                if (int.Parse(tempSplit[0]) < 16)
+                if (tempSplit.Length > 1 && int.Parse(tempSplit[0]) < 16)
                 {       
                     var fractionValue = double.Parse("." + tempSplit[1]) * 16;
                     workingList.Add(GetHexLetter(fractionValue));
@@ -89,11 +95,12 @@ namespace HexadecimalConverter
                     workingList.Reverse();
                     break; //exit loop
                 }
-                else
+                else if (tempSplit.Length > 1 && int.Parse(tempSplit[0]) > 16)
                 {
                     intermediate = int.Parse(tempSplit[0]);
                     var fractionValue = double.Parse("." + tempSplit[1]) * 16;
                     workingList.Add(GetHexLetter(fractionValue));
+                    
                 }
             }
 

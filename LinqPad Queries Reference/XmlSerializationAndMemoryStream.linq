@@ -2,7 +2,6 @@
   <Namespace>System.Xml.Serialization</Namespace>
 </Query>
 
-
 public class Classroom
 {
 	public string RoomNumber { get; set; }
@@ -40,6 +39,3 @@ void Main()
 		
 			;
 }
-
-
-

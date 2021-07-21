@@ -16,6 +16,12 @@ void Main()
 class MusicTrack : IFormattable
 {
 
+	public MusicTrack(string artist, string title)
+	{
+		Artist = artist;
+		Title = title;
+	}
+
 	string Artist { get; set; }
 	string Title { get; set; }
 
@@ -42,13 +48,6 @@ class MusicTrack : IFormattable
 	public override string ToString()
 	{
 		return Artist + " " + Title;
-	}
-
-	public MusicTrack(string artist, string title)
-	{
-		Artist = artist;
-		Title = title;
-	}
+	}	
 
 }
-
