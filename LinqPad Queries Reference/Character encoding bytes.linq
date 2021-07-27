@@ -25,4 +25,14 @@ foreach (byte b in namebytesInUnicode)
 	Console.Write(Convert.ToString(b, 2) + " ");
 }
  
+Console.WriteLine();
+ 
+//And just for fun, let's look at booleans:
+
+bool isItHotOutside = true;
+
+byte boolByte = Convert.ToByte(isItHotOutside);
+
+Console.WriteLine(Convert.ToString(boolByte, 2));
+ 
 ;
